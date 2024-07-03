@@ -17,7 +17,6 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->string('account_number')->unique();
             $table->string('address');
-            $table->string('zip_code');
             $table->string('country');
             $table->string('phone');
             $table->timestamps();
