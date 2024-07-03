@@ -6,11 +6,11 @@
         placeholder="Search" />
     @if ($keyword)
         <ul>
-            @forelse ($customers as $customer)
+            @forelse ($this->highlightedCustomers as $customer)
                 <li>
-                    {{ $customer['name'] }}<br>
-                    {{ $customer['email'] }}<br>
-                    {{ $customer['address'] }}
+                    {!! $customer['name'] !!}<br>
+                    {!! $customer['email'] !!}<br>
+                    {!! $customer['address'] !!}
                 </li>
             @empty
                 <li>
