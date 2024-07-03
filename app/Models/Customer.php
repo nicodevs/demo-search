@@ -15,7 +15,7 @@ class Customer extends Model
     public function scopeSearch(Builder $query, string $keyword): Builder
     {
         return $query->whereFullText(
-            ['name', 'email', 'address', 'phone'],
+            ['name', 'email', 'address'],
             "$keyword*",
             ['mode' => 'boolean'],
         );
