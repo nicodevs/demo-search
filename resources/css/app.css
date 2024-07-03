@@ -1,0 +1,35 @@
+.customer-search {
+    font-family: sans-serif;
+    max-width: 380px;
+}
+
+.customer-search input {
+    font-size: 1.5rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    border: 2px solid #CCC;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.customer-search ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.customer-search ul li {
+    padding: 0.5rem;
+    border-bottom: 1px solid #DDD;
+    line-height: 1.5;
+}
+
+.customer-search ul li div:first-child {
+    font-weight: bold;
+}
+
+.customer-search ul li div:last-child {
+    font-size: 0.75rem;
+    color: #666;
+}
