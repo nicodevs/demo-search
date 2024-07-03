@@ -14,9 +14,6 @@ class Customer extends Model
 
     public function scopeSearch(Builder $query, string $keyword): Builder
     {
-        return $query->where('name', 'LIKE', "%{$keyword}%")
-            ->orWhere('email', 'LIKE', "%{$keyword}%")
-            ->orWhere('address', 'LIKE', "%{$keyword}%")
-            ->orWhere('phone', 'LIKE', "%{$keyword}%");
+        return $query->whereFullText(['name', 'email', 'address'], $keyword);
     }
 }
