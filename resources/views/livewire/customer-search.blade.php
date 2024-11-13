@@ -8,9 +8,9 @@
         <ul>
             @forelse ($this->highlightedCustomers as $customer)
                 <li>
-                    {!! $customer['name'] !!}<br>
-                    {!! $customer['email'] !!}<br>
-                    {!! $customer['address'] !!}
+                    <div>{!! $customer['name'] !!}</div>
+                    <div>{!! $customer['email'] !!}</div>
+                    <div>{!! $customer['address'] !!}</div>
                 </li>
             @empty
                 <li>

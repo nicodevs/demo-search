@@ -2,22 +2,19 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Laravel\Scout\Searchable;
 
 class Customer extends Model
 {
     use HasFactory;
+    use Searchable;
 
     protected $guarded = [];
 
-    public function scopeSearch(Builder $query, string $keyword): Builder
+    public function toSearchableArray()
     {
-        return $query->whereFullText(
-            ['name', 'email', 'address'],
-            "$keyword*",
-            ['mode' => 'boolean'],
-        );
+        return ['id' => (string) $this->id] + $this->toArray();
     }
 }
