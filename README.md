@@ -1,6 +1,6 @@
 This codebase is a companion piece of the article:
 
-# [From MySQL to Typesense: Blazing-Fast Full-Text Search in Laravel](https://tighten.com/insights/how-to-automatically-generate-dynamic-opengraph-images-for-all-your-site-pages/)
+# [From MySQL to Typesense: Blazing-Fast Full-Text Search in Laravel](https://tighten.com/insights/blazing-fast-full-text-search-in-laravel-from-mysql-to-typesense/)
 
 Published in Tighten's blog on July 31th, 2024.
 
